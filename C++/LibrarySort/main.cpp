@@ -4,15 +4,15 @@
 
 int main()
 {
-    std::array<double, 5> a = {1.0, 5.0, 3.0, 1.0, 4.0};
+    std::array<int, 5> a = {1, 3, 2, 5, 3};
     auto as = librarySort(a);
 
-    for (double t : a)
+    for (int t : a)
     {
         std::cout << t << ' ';
     }
     std::cout << '\n';
-    for (double t : as)
+    for (int t : as)
     {
         std::cout << t << ' ';
     }

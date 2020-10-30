@@ -13,16 +13,11 @@ t<T, SIZE> librarySort(const t<T, SIZE> &arr)
         const T tmp = arr.at(i);
         int j = i + 1;
 
-        for (; j < SIZE; ++j)
+        for (; j < SIZE && tmp > arr.at(j); ++j)
         {
-            if (tmp <= arr.at(j))
-            {
-                arr_sorted.at(j - 1) = tmp;
-                break;
-            }
             arr_sorted.at(j - 1) = arr.at(j);
         }
-        
+        arr_sorted.at(j - 1) = tmp;  
     }
 
     return arr_sorted;
